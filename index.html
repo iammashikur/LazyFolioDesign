@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="Description" content="Enter your description here" />
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/4.6.0/materia/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+    />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <title>Title</title>
+
+    <style>
+      body {
+        
+        min-height: 100vh;
+      }
+      .header.card {
+        background-image: url("cover.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+        height: 200px;
+        display: block;
+        border-radius: 15px;
+        padding: 20px;
+      }
+
+      .header .btn {
+        border-radius: 25px;
+      }
+
+      .header.card .profile {
+        height: 160px;
+        width: 160px;
+        display: block;
+        position: absolute;
+        top: 110px;
+        left: 0;
+        right: 0;
+        margin-left: auto;
+        margin-right: auto;
+        border-radius: 50%;
+        border: 4px solid #ffffff;
+        box-shadow: 0 1px 4px rgb(0 0 0 / 40%);
+      }
+
+
+      /**
+ * profile
+ */
+
+.profile {
+  overflow: hidden; 
+}
+
+.profile:nth-child(1) { background: cornflowerblue; }
+.profile:nth-child(2) { background: salmon; }
+.profile:nth-child(3) { background: gray; }
+
+/**
+ * The "shine" element
+ */
+
+.profile:after {
+  content: "";
+  position: absolute;
+  top: -110%;
+  left: -210%;
+  width: 200%;
+  height: 200%;
+  opacity: 0;
+  transform: rotate(30deg);
+  
+  background: rgba(255, 255, 255, 0.13);
+  background: linear-gradient(
+    to right, 
+    rgba(255, 255, 255, 0.13) 0%,
+    rgba(255, 255, 255, 0.13) 77%,
+    rgba(255, 255, 255, 0.5) 92%,
+    rgba(255, 255, 255, 0.0) 100%
+  );
+}
+
+/* Hover state - trigger effect */
+
+.profile:hover:after {
+  opacity: 1;
+  top: -30%;
+  left: -30%;
+  transition-property: left, top, opacity;
+  transition-duration: 0.7s, 0.7s, 0.15s;
+  transition-timing-function: ease;
+}
+
+/* Active state */
+
+.profile:active:after {
+  opacity: 0;
+}
+
+
+      .profile-name {
+        text-align: center;
+        margin-top: 80px;
+        font-size: 25px;
+      }
+
+      .portfolio {
+        border-radius: 15px;
+        /* background-color: aliceblue; */
+      }
+      .items,
+      .items img {
+        border-radius: 15px;
+        border: 3px solid #fff;
+      }
+
+      .btn-primary {
+        background-image: linear-gradient(
+          to right bottom,
+          #e9ff00,
+          #f9dc00,
+          #ffb900,
+          #ff9500,
+          #ff700d,
+          #ff5430,
+          #ff3548,
+          #ff0060,
+          #f90082,
+          #e200ab,
+          #b300d7,
+          #4534ff
+        );
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-md-8 col-12">
+          <div
+            class="header card mt-4"
+            data-aos="fade-down"
+            data-aos-duration="3000"
+          >
+            <div data-aos="fade-up" data-aos-duration="3000">
+              <button type="button" class="btn btn-primary btn-sm float-right">
+                <i class="fas fa-phone"></i> CONTACT
+              </button>
+              <button
+                type="button"
+                class="btn btn-primary btn-sm float-right mr-2"
+              >
+                <i class="fas fa-paperclip"></i> CV
+              </button>
+            </div>
+
+            <div class="profile" data-aos="zoom-out" data-aos-duration="3000">
+              <img src="profile.jpg" alt="" class="w-100 rounded-circle" />
+            </div>
+          </div>
+
+          <div data-aos="zoom-in" data-aos-duration="3000">
+            <h1 class="profile-name">MASHIKUR RAHMAN</h1>
+            <p class="text-center">Fullstack Web Developer</p>
+          </div>
+
+          <div
+            class="card portfolio mt-4"
+            data-aos="fade-up"
+            data-aos-duration="3000"
+          >
+            <img class="card-img-top" src="holder.js/100px180/" alt="" />
+            <div class="card-body">
+              <h4 class="card-title">
+                <i class="fas fa-camera-retro"></i> Photos
+              </h4>
+
+              <div class="row">
+                <div class="col-md-4 mt-3 mb-3">
+                  <div
+                    class="card items"
+                    data-aos="fade-up"
+                    data-aos-duration="3000"
+                    style="min-height: 200px"
+                  >
+                    <img src="one.jpg" alt="" class="w-100" />
+                  </div>
+                </div>
+
+                <div class="col-md-4 mt-3 mb-3">
+                  <div
+                    class="card items"
+                    data-aos="fade-up"
+                    data-aos-duration="3000"
+                    style="min-height: 200px"
+                  >
+                    <img src="two.jpg" alt="" class="w-100" />
+                  </div>
+                </div>
+
+                <div class="col-md-4 mt-3 mb-3">
+                  <div
+                    class="card items"
+                    data-aos="fade-up"
+                    data-aos-duration="3000"
+                    style="min-height: 200px"
+                  >
+                    <img src="three.jpg" alt="" class="w-100" />
+                  </div>
+                </div>
+
+                <div class="col-md-4 mt-3 mb-3">
+                  <div
+                    class="card items"
+                    data-aos="fade-up"
+                    data-aos-duration="3000"
+                    style="min-height: 200px"
+                  >
+                    <img src="four.jpg" alt="" class="w-100" />
+                  </div>
+                </div>
+
+                <div class="col-md-4 mt-3 mb-3">
+                  <div
+                    class="card items"
+                    data-aos="fade-up"
+                    data-aos-duration="3000"
+                    style="min-height: 200px"
+                  >
+                    <img src="five.jpg" alt="" class="w-100" />
+                  </div>
+                </div>
+
+                <div class="col-md-4 mt-3 mb-3">
+                  <div
+                    class="card items"
+                    data-aos="fade-up"
+                    data-aos-duration="3000"
+                    style="min-height: 200px"
+                  >
+                    <img src="six.jpg" alt="" class="w-100" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+
+          <div
+            class="card portfolio mt-4"
+            data-aos="fade-up"
+            data-aos-duration="3000"
+          >
+            <img class="card-img-top" src="holder.js/100px180/" alt="" />
+            <div class="card-body">
+              <h4 class="card-title">
+                <i class="fas fa-camera-retro"></i> Photos
+              </h4>
+
+              <div class="row">
+                <div class="col-md-4 mt-3 mb-3">
+                  <div
+                    class="card items"
+                    data-aos="fade-up"
+                    data-aos-duration="3000"
+                    style="min-height: 200px"
+                  >
+                    <img src="one.jpg" alt="" class="w-100" />
+                  </div>
+                </div>
+
+                <div class="col-md-4 mt-3 mb-3">
+                  <div
+                    class="card items"
+                    data-aos="fade-up"
+                    data-aos-duration="3000"
+                    style="min-height: 200px"
+                  >
+                    <img src="two.jpg" alt="" class="w-100" />
+                  </div>
+                </div>
+
+                <div class="col-md-4 mt-3 mb-3">
+                  <div
+                    class="card items"
+                    data-aos="fade-up"
+                    data-aos-duration="3000"
+                    style="min-height: 200px"
+                  >
+                    <img src="three.jpg" alt="" class="w-100" />
+                  </div>
+                </div>
+
+                <div class="col-md-4 mt-3 mb-3">
+                  <div
+                    class="card items"
+                    data-aos="fade-up"
+                    data-aos-duration="3000"
+                    style="min-height: 200px"
+                  >
+                    <img src="four.jpg" alt="" class="w-100" />
+                  </div>
+                </div>
+
+                <div class="col-md-4 mt-3 mb-3">
+                  <div
+                    class="card items"
+                    data-aos="fade-up"
+                    data-aos-duration="3000"
+                    style="min-height: 200px"
+                  >
+                    <img src="five.jpg" alt="" class="w-100" />
+                  </div>
+                </div>
+
+                <div class="col-md-4 mt-3 mb-3">
+                  <div
+                    class="card items"
+                    data-aos="fade-up"
+                    data-aos-duration="3000"
+                    style="min-height: 200px"
+                  >
+                    <img src="six.jpg" alt="" class="w-100" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+
+
+          <div
+            class="card portfolio mt-4"
+            data-aos="fade-up"
+            data-aos-duration="3000"
+          >
+            <img class="card-img-top" src="holder.js/100px180/" alt="" />
+            <div class="card-body">
+              <h4 class="card-title">
+                <i class="fas fa-camera-retro"></i> Photos
+              </h4>
+
+              <div class="row">
+                <div class="col-md-4 mt-3 mb-3">
+                  <div
+                    class="card items"
+                    data-aos="fade-up"
+                    data-aos-duration="3000"
+                    style="min-height: 200px"
+                  >
+                    <img src="one.jpg" alt="" class="w-100" />
+                  </div>
+                </div>
+
+                <div class="col-md-4 mt-3 mb-3">
+                  <div
+                    class="card items"
+                    data-aos="fade-up"
+                    data-aos-duration="3000"
+                    style="min-height: 200px"
+                  >
+                    <img src="two.jpg" alt="" class="w-100" />
+                  </div>
+                </div>
+
+                <div class="col-md-4 mt-3 mb-3">
+                  <div
+                    class="card items"
+                    data-aos="fade-up"
+                    data-aos-duration="3000"
+                    style="min-height: 200px"
+                  >
+                    <img src="three.jpg" alt="" class="w-100" />
+                  </div>
+                </div>
+
+                <div class="col-md-4 mt-3 mb-3">
+                  <div
+                    class="card items"
+                    data-aos="fade-up"
+                    data-aos-duration="3000"
+                    style="min-height: 200px"
+                  >
+                    <img src="four.jpg" alt="" class="w-100" />
+                  </div>
+                </div>
+
+                <div class="col-md-4 mt-3 mb-3">
+                  <div
+                    class="card items"
+                    data-aos="fade-up"
+                    data-aos-duration="3000"
+                    style="min-height: 200px"
+                  >
+                    <img src="five.jpg" alt="" class="w-100" />
+                  </div>
+                </div>
+
+                <div class="col-md-4 mt-3 mb-3">
+                  <div
+                    class="card items"
+                    data-aos="fade-up"
+                    data-aos-duration="3000"
+                    style="min-height: 200px"
+                  >
+                    <img src="six.jpg" alt="" class="w-100" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      setTimeout(function(){
+   $('.profile').mouseenter( handlerIn ).mouseleave( handlerOut );
+},2000);
+    </script>
+
+    <script>
+      AOS.init();
+    </script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js"></script>
+  </body>
+</html>
